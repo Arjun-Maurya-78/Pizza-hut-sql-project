@@ -11,7 +11,7 @@ An end-to-end SQL analysis of a full year of Pizza Hut order data using **MySQL*
 
 ### Entity Relationship Diagram
 
-![ER Diagram](docs/er_diagram.svg)
+![ER Diagram](er_diagram.svg))
 
 - `pizza_types` → `pizzas` (one type has multiple sizes, each with its own price)
 - `pizzas` → `order_details` (each line item references one pizza/size)
@@ -41,22 +41,6 @@ pizza-hut-sql-project/
     └── er_diagram.svg
 ```
 
-## ▶️ How to Run
-
-1. Clone this repo and open a MySQL client (Workbench, CLI, etc.)
-2. Create the schema:
-   ```sql
-   SOURCE schema/create_tables.sql;
-   ```
-3. Load the data (make sure `local_infile` is enabled, and update file paths in the script if needed):
-   ```sql
-   SOURCE schema/load_data.sql;
-   ```
-4. Run the analysis queries:
-   ```sql
-   SOURCE queries/pizza_sales_analysis.sql;
-   ```
-
 ## 🔍 Key Insights
 
 | Metric | Result |
@@ -68,14 +52,6 @@ pizza-hut-sql-project/
 | Top pizza by quantity sold | The Classic Deluxe Pizza — 2,453 units |
 | Top pizza by revenue | The Thai Chicken Pizza — $43,434.25 |
 
-**Revenue by category:**
-
-| Category | Revenue |
-|---|---|
-| Classic | $220,053.10 |
-| Supreme | $208,197.00 |
-| Chicken | $195,919.50 |
-| Veggie | $193,690.45 |
 
 **Takeaways:**
 - Revenue is fairly evenly split across all four pizza categories (~24–27% each), suggesting a well-balanced, diversified menu rather than reliance on one category.
@@ -177,7 +153,3 @@ ORDER BY order_hour;
 - Subqueries and derived tables
 - Window functions (`RANK() OVER (PARTITION BY ...)`, running totals with `SUM() OVER`)
 - Translating business questions into SQL and business insights back out
-
-## 📄 License
-
-This project is licensed under the MIT License — feel free to use it for learning or reference.
