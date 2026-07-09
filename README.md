@@ -60,7 +60,7 @@ pizza-hut-sql-project/
 
 ## 📝 Example Queries
 
-A sample of the analysis, ranging from simple joins to advanced window functions — full set of 13 queries is in [`queries/pizza_sales_analysis.sql`](queries/pizza_sales_analysis.sql).
+A sample of the analysis, ranging from simple joins to advanced window functions — full set of 13 queries is in [`queries/pizza_sales_analysis.sql`](pizza_sales_analysis.sql).
 
 ### 1. Top 5 best-selling pizzas by quantity
 ```sql
