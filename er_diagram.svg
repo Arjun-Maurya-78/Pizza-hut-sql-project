@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="480" fill="#ffffff"/>
+
+  <!-- pizza_types -->
+  <rect x="30" y="40" width="220" height="150" rx="8" fill="#fff4e6" stroke="#d97706" stroke-width="2"/>
+  <rect x="30" y="40" width="220" height="34" rx="8" fill="#d97706"/>
+  <text x="140" y="63" text-anchor="middle" fill="white" font-weight="bold" font-size="15">pizza_types</text>
+  <text x="45" y="95" font-size="13">PK  pizza_type_id</text>
+  <text x="45" y="118" font-size="13">    name</text>
+  <text x="45" y="141" font-size="13">    category</text>
+  <text x="45" y="164" font-size="13">    ingredients</text>
+
+  <!-- pizzas -->
+  <rect x="330" y="40" width="220" height="150" rx="8" fill="#e6f4ff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="330" y="40" width="220" height="34" rx="8" fill="#2563eb"/>
+  <text x="440" y="63" text-anchor="middle" fill="white" font-weight="bold" font-size="15">pizzas</text>
+  <text x="345" y="95" font-size="13">PK  pizza_id</text>
+  <text x="345" y="118" font-size="13">FK  pizza_type_id</text>
+  <text x="345" y="141" font-size="13">    size</text>
+  <text x="345" y="164" font-size="13">    price</text>
+
+  <!-- order_details -->
+  <rect x="330" y="280" width="220" height="150" rx="8" fill="#e9f7ef" stroke="#059669" stroke-width="2"/>
+  <rect x="330" y="280" width="220" height="34" rx="8" fill="#059669"/>
+  <text x="440" y="303" text-anchor="middle" fill="white" font-weight="bold" font-size="15">order_details</text>
+  <text x="345" y="335" font-size="13">PK  order_details_id</text>
+  <text x="345" y="358" font-size="13">FK  order_id</text>
+  <text x="345" y="381" font-size="13">FK  pizza_id</text>
+  <text x="345" y="404" font-size="13">    quantity</text>
+
+  <!-- orders -->
+  <rect x="630" y="280" width="220" height="120" rx="8" fill="#fdeaea" stroke="#dc2626" stroke-width="2"/>
+  <rect x="630" y="280" width="220" height="34" rx="8" fill="#dc2626"/>
+  <text x="740" y="303" text-anchor="middle" fill="white" font-weight="bold" font-size="15">orders</text>
+  <text x="645" y="335" font-size="13">PK  order_id</text>
+  <text x="645" y="358" font-size="13">    order_date</text>
+  <text x="645" y="381" font-size="13">    order_time</text>
+
+  <!-- Relationships -->
+  <line x1="250" y1="115" x2="330" y2="115" stroke="#555" stroke-width="1.5"/>
+  <text x="290" y="108" text-anchor="middle" font-size="12" fill="#555">1:N</text>
+
+  <line x1="440" y1="190" x2="440" y2="280" stroke="#555" stroke-width="1.5"/>
+  <text x="455" y="235" font-size="12" fill="#555">1:N</text>
+
+  <line x1="550" y1="360" x2="630" y2="345" stroke="#555" stroke-width="1.5"/>
+  <text x="590" y="335" text-anchor="middle" font-size="12" fill="#555">N:1</text>
+
+  <text x="450" y="450" text-anchor="middle" font-size="12" fill="#888">Pizza Hut Sales — Entity Relationship Diagram</text>
+</svg>
